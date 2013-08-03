@@ -1,0 +1,12 @@
+{
+	"APP": {
+		"cookie": {
+			"session_key": "laravel_session"
+		},
+		"api": {
+			"host": "local.phpchat.example.com",
+			"port": 80,
+			"path": "/api/node/session"
+		}
+	}
+}

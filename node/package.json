@@ -1,0 +1,13 @@
+{
+	"name":"phpchat_example",
+	"version":"0.0.1",
+	"private":true,
+	"dependencies":{
+		"socket.io": "*",
+		"redis": "*",
+		"cookie": "*",
+		"groan": "*",
+		"config": "*",
+		"forever": "*"
+	}
+}
