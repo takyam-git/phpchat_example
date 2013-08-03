@@ -1,5 +1,6 @@
 /.idea
 /nginx/*.conf
+/nginx/logs
 /composer.phar
 /node/node_modules
 /node/config/*.json

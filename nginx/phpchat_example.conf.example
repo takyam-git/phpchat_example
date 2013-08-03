@@ -1,0 +1,29 @@
+server {
+    listen 80;
+    server_name local.phpchat.example.com;
+
+    access_log /path/to/logs/phpchat_access.log;
+    error_log /path/to/logs/phpchat_error.log;
+
+    root /path/to/phpchat_example/app/public;
+    charset utf-8;
+
+    index index.php;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass localhost:9000;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+
+    location ~ /\. {
+        access_log off;
+        log_not_found off;
+        deny all;
+    }
+}
